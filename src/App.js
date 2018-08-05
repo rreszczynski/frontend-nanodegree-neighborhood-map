@@ -6,8 +6,8 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			map: null,			
-			mapLoaded: false,			
+			map: null,
+			mapLoaded: false,
 			places: [
 				{
 					name: "Święty Michał Pub",
@@ -68,14 +68,14 @@ class App extends React.Component {
 		
 		//getting data from Foursquare
 		var self = this
-    var clientId = "HCFKSRBOE34ZWFFURMZYDY1F4HT2D3OHGOXFMU12H5Y3LTVU"
+		var clientId = "HCFKSRBOE34ZWFFURMZYDY1F4HT2D3OHGOXFMU12H5Y3LTVU"
 		var clientSecret = "G4MBBX2XNBGQJYQ3QJJY1N2ZPVTB1R05CHPT5N5LM3X4P5IL"
 		var url = "https://api.foursquare.com/v2/venues/search?client_id=" + clientId + "&client_secret=" + clientSecret +
 			"&v=20180803&ll=" + place.marker.getPosition().lat() + "," + place.marker.getPosition().lng() + "&limit=1"
 		
-		fetch(url).then(			
+		fetch(url).then(
 			function (response) {
-				if (response.status !== 200) {					
+				if (response.status !== 200) {
 					content += errorMsg
 					console.log(content)
 					self.state.infoWin.setContent(content)
@@ -92,7 +92,7 @@ class App extends React.Component {
 					self.state.infoWin.setContent(content)
 				})
 			}			
-    ).catch(function (err) {
+		).catch(function (err) {
 				console.log(err)
 				content += errorMsg
 				self.state.infoWin.setContent(content)
@@ -136,7 +136,7 @@ class App extends React.Component {
 		
 		var currPlaces = obj.state.places		
 			for (var i = 0; i < obj.state.places.length; i++) {
-				var marker = new window.google.maps.Marker({	
+				var marker = new window.google.maps.Marker({
 					position: obj.state.places[i].coords,
 					name: obj.state.places[i].name,
 				})		
@@ -156,7 +156,7 @@ class App extends React.Component {
 		obj.setState({ places : currPlaces })
 	}
 
-  render() {
+	render() {
 		return (
 			<div id='app'>
 				{
@@ -175,10 +175,10 @@ class App extends React.Component {
 							<div>Try to refresh the page if this message is on the screen for too long.</div>
 						</div>
 				}
-				<div id='map' role='application' aria-label='google map' tabIndex='-1'></div>	
+				<div id='map' role='application' aria-label='google map' tabIndex='-1'></div>
 			</div>
 		)
-  } 
+	}
 }
 
 export default App
@@ -186,9 +186,9 @@ export default App
 
 //function for asynchronous load of google maps script
 function loadJS(src) {
-    var ref = window.document.getElementsByTagName("script")[0]
-    var script = window.document.createElement("script")
-    script.src = src
-    script.async = true
-    ref.parentNode.insertBefore(script, ref)
+	var ref = window.document.getElementsByTagName("script")[0]
+	var script = window.document.createElement("script")
+	script.src = src
+	script.async = true
+	ref.parentNode.insertBefore(script, ref)
 }

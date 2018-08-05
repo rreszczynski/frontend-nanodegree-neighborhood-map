@@ -34,7 +34,7 @@ class PlacesList extends React.Component {
 	}	
 	
 	render() {
-    return (
+		return (
 			<div id='locations-list'>
 				<input
 					tabIndex='1'
@@ -48,11 +48,11 @@ class PlacesList extends React.Component {
 				<ul tabIndex='2'>
 					{this.state.foundPlaces.map((place, idx) => (
 						<Place place={place} key={idx} showInfoWin={this.props.showInfoWin}/>
-					))} 
+					))}
 				</ul>
 			</div>
-    )
-  } 
+		)
+	} 
 }
 
 export default PlacesList
