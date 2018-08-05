@@ -1,0 +1,44 @@
+html, body, #root, #app {
+	height: 100%;
+	font-family: "Tahoma";
+}
+
+ul {
+  list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#search {
+	background-color: white;
+	cursor: text;
+	width: 100%;
+}
+
+.element {
+	padding: 0.2em 0;
+}
+
+.element:hover {
+	background-color: yellow;
+	cursor: pointer;
+}
+
+#map {
+	height: 98%;
+	width: 100%;
+}
+
+#locations-list {
+	position: absolute;
+	z-index: 1;
+	margin-top: 2em;
+	margin-left: 2em;
+	padding: 0.5em 1em;
+	background-color: #3abca7;
+	border-radius: 0.4em;
+}
+
+#foursquare-error {
+	color: red;
+}
