@@ -67,9 +67,10 @@ class App extends React.Component {
 		var errorMsg = "<div id='foursquare-error'>Couldn't load data from Foursquare...</div>"
 		
 		//getting data from Foursquare
+		//please insert correct Foursquare clientId and ClientSecret
 		var self = this
-		var clientId = "HCFKSRBOE34ZWFFURMZYDY1F4HT2D3OHGOXFMU12H5Y3LTVU"
-		var clientSecret = "G4MBBX2XNBGQJYQ3QJJY1N2ZPVTB1R05CHPT5N5LM3X4P5IL"
+		var clientId = "FOURSQUARE_CLIENT_ID"
+		var clientSecret = "FOURSQUARE_CLIENT_SECRET"
 		var url = "https://api.foursquare.com/v2/venues/search?client_id=" + clientId + "&client_secret=" + clientSecret +
 			"&v=20180803&ll=" + place.marker.getPosition().lat() + "," + place.marker.getPosition().lng() + "&limit=1"
 		
