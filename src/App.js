@@ -39,8 +39,8 @@ class App extends React.Component {
 	
 	componentDidMount() {
 		window.initMap = this.mapSetup
-		//please use different key if mine doesn't work
-		loadJS('https://maps.googleapis.com/maps/api/js?key=AIzaSyCeSWSemJpXaBQ-HVuvvMnmiOp-Uob1sKo&libraries=places&callback=initMap')
+		//please insert working google maps api key below
+		loadJS('https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAP_API_KEY_GOES_HERE&libraries=places&callback=initMap')
 	}
 
 	//show Info window after clicking marker
